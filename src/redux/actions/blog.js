@@ -13,6 +13,14 @@ export const addBlog = ({ title = '', description ='', dateAdded = Date.now}) =>
     }
 }
 
+export const editBlog = ( id , updates ) => {
+    return {
+        type : actionType.REMOVE_BLOG,
+        id,
+        updates
+    }
+}
+
 
 export const removeBlog = ({ id }) => {
     return {
