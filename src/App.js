@@ -1,5 +1,7 @@
 import Blogs from './components/blogs/Blogs';
 import BlogDetails from './components/blogDetails/BlogDetails';
+import AddBlog from './components/addBlog/AddBlog';
+
 
 import {
   BrowserRouter as Router,
@@ -19,7 +21,7 @@ function App() {
                 <Link to="/">Blogs</Link>
               </li>
               <li>
-                <Link to="/about">Add Blog</Link>
+                <Link to="/add-blog">Add Blog</Link>
               </li>
             </ul>
           </nav>
@@ -42,6 +44,7 @@ function App() {
               <h1>
                 Add Blog
               </h1>
+              <AddBlog/>
             </Route>
             <Route path="/edit-blog/:id">
               <h1>
