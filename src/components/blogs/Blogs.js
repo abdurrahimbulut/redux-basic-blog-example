@@ -6,11 +6,10 @@ import { connect } from 'react-redux'
 const Blogs = ({blogs}) => {
     return (
         <div>
-            {console.log(blogs)}
             {
                 blogs.map(blog => (
                     <ul>
-                        <BlogList  blog={blog}  />
+                        <BlogList key={blog.id} blog={blog}  />
                     </ul>
                 ))
             }

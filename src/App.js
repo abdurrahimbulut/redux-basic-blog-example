@@ -28,21 +28,10 @@ function App() {
 
 
           <Switch>
-            <Route exact path="/">
-              <h1>
-                Blog app
-              </h1>
-              <Blogs />
-            </Route>
+            <Route exact path="/" render={(props) => <Blogs {...props}/>} />
             <Route path="/blog-details/:id"  render={(props) => <BlogDetails {...props}/>} />
-            <Route path="/add-blog">
-              <h1>
-                Add Blog
-              </h1>
-              <AddBlog/>
-            </Route>
+            <Route path="/add-blog" render={(props) => <AddBlog {...props}/>} />
             <Route path="/edit-blog/:id" render={(props) => <EditBlog {...props}/>} />
-              
           </Switch>
 
         </div>

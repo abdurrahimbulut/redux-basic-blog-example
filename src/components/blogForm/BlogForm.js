@@ -12,10 +12,11 @@ const BlogForm = (props) => {
         });
     }
     useEffect(() => {
-        setTitle(props.title);
-        setDescription(props.description);
-
-    }, [])
+        if (props.title && props.description) {
+            setTitle(props.title);
+            setDescription(props.description);
+        }
+    }, []);
 
     return (
         <div>
