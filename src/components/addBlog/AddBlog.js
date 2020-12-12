@@ -2,8 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 import BlogForm from '../blogForm/BlogForm';
 import {addBlog} from '../../redux/actions/blog';
+import { useHistory } from "react-router-dom";
 
 const AddBlog = (props) => {
+    let history = useHistory();
+
     const setValues = ({title,description}) => {
         props.dispatch(addBlog(
             {
@@ -11,11 +14,14 @@ const AddBlog = (props) => {
                 description
             }
         ));
+        history.push('/');
     }
+
+
     return (
         <div>
-            <h2>deneme</h2>
-            <BlogForm setValues={setValues}/>
+            <h2>New Blog</h2>
+            <BlogForm setValues={setValues}  />
         </div>
     )
 }

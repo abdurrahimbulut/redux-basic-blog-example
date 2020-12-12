@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 
 const BlogForm = (props) => {
     const [title,setTitle] =  useState("");
@@ -11,6 +11,11 @@ const BlogForm = (props) => {
             description
         });
     }
+    useEffect(() => {
+        setTitle(props.title);
+        setDescription(props.description);
+
+    }, [])
 
     return (
         <div>
