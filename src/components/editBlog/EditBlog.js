@@ -27,7 +27,7 @@ const EditBlog = (props) => {
     return (
         <div>
             <h2>Edit Blog</h2>
-            <BlogForm  setValues={setValues} title={props.blogDetails.title} description={props.blogDetails.description}  />)
+            <BlogForm  setValues={setValues} title={props.blogDetails.title} description={props.blogDetails.description}  />
         </div>
     )
 }
