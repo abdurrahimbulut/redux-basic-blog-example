@@ -11,6 +11,7 @@ const BlogForm = (props) => {
             description
         });
     }
+    
     useEffect(() => {
         if (props.title && props.description) {
             setTitle(props.title);

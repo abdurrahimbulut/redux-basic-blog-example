@@ -9,10 +9,6 @@ import {addBlog} from "./redux/actions/blog";
 
 const store = configureStore();
 
-console.log(store.getState());
-store.dispatch(addBlog({ title :"deneme 2 title",description : "deskiripşinida gönderdim"}));
-console.log(store.getState());
-
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
