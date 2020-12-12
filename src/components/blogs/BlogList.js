@@ -1,10 +1,12 @@
 import React from 'react'
 
-const BlogList = () => {
+const BlogList = ({blog}) => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <li>
+                {blog.title}
+            </li>
+        </>
     )
 }
 

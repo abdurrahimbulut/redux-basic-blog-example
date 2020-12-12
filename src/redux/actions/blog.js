@@ -1,5 +1,6 @@
+import * as actionType from './actionType';
 import {v4 as uuid } from 'uuid';
-import actionType from './actionType';
+
 
 export const addBlog = ({ title = '', description ='', dateAdded = Date.now}) => {
     return {

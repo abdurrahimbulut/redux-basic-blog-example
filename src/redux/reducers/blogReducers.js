@@ -1,5 +1,14 @@
 import * as actionType from '../actions/actionType';
-const blogState = [];
+import {v4 as uuid } from 'uuid';
+
+const blogState = [
+    {
+        id : uuid(),
+        title : "deneme blog",
+        description : "deneme içerik",
+        dateAdded : Date.now()
+    }
+];
 
 const blogReducers = (state = blogState, action) => {
     switch (action.type) {

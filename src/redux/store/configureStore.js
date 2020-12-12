@@ -2,8 +2,10 @@
 import {createStore,combineReducers} from 'redux';
 import blogReducers from '../reducers/blogReducers';
 
-const configureStore = createStore(combineReducers({
-    blog : blogReducers
-}));
 
-export default configureStore;
+export default ()=>{
+    const configureStore = createStore(combineReducers({
+        blogs : blogReducers    
+    },window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()));
+    return configureStore;
+};

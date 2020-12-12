@@ -1,12 +1,30 @@
 import React from 'react'
 import BlogList from './BlogList'
+import { connect } from 'react-redux'
 
-const Blogs = () => {
+
+const Blogs = ({blogs}) => {
     return (
         <div>
-            <BlogList />
+            {console.log(blogs)}
+            {
+                blogs.map(blog => (
+                    <ul>
+                        <BlogList blog={blog}  />
+                    </ul>
+                ))
+            }
+            
         </div>
     )
 }
 
-export default Blogs
+const mapStateToProps = (state) => {
+    return {
+        blogs: state.blogs
+    }
+}
+
+export default connect(
+    mapStateToProps
+) (Blogs);
