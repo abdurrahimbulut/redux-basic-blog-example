@@ -5,17 +5,12 @@ import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store/configureStore';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
-import * as BlogActions from "./redux/actions/blog";
-import blogReducers from "./redux/reducers/blogReducers";
-
+import {addBlog} from "./redux/actions/blog";
 
 const store = configureStore();
 
 console.log(store.getState());
-store.dispatch(BlogActions.addBlog({ title :"deneme 2 title",description : "deskiripşinida gönderdim"}));
+store.dispatch(addBlog({ title :"deneme 2 title",description : "deskiripşinida gönderdim"}));
 console.log(store.getState());
 
 ReactDOM.render(

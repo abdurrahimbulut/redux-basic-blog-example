@@ -29,3 +29,11 @@ export const removeBlog = ({ id }) => {
         id
     }
 }
+
+
+export const getBlog = ({ id }) => {
+    return {
+        type : actionType.GET_BLOG,
+        id
+    }
+}

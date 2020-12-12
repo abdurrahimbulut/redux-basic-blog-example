@@ -13,20 +13,22 @@ const blogState = [
 const blogReducers = (state = blogState, action) => {
     switch (action.type) {
         case actionType.ADD_BLOG:
-                return [...state,action.blog]
+            return [...state,action.blog]
         case actionType.REMOVE_BLOG:
-                return state.filter(({id}) => id !== action.id)
+            return state.filter(({id}) => id !== action.id)
         case actionType.EDIT_BLOG:
-                return state.map((blog) => {
-                   if (blog.id === action.id) {
-                       return {
-                            ...blog,
-                            ...action.updates
-                       }
-                   }else{
-                       return blog
-                   }
-                })
+            return state.map((blog) => {
+                if (blog.id === action.id) {
+                    return {
+                        ...blog,
+                        ...action.updates
+                    }
+                }else{
+                    return blog
+                }
+            })
+        case actionType.GET_BLOG:
+            return state.filter(({id}) => id === action.id)
         default:
             return state
     }   

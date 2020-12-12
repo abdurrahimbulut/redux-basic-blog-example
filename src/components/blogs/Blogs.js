@@ -10,7 +10,7 @@ const Blogs = ({blogs}) => {
             {
                 blogs.map(blog => (
                     <ul>
-                        <BlogList blog={blog}  />
+                        <BlogList  blog={blog}  />
                     </ul>
                 ))
             }

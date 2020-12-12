@@ -1,4 +1,6 @@
 import Blogs from './components/blogs/Blogs';
+import BlogDetails from './components/blogDetails/BlogDetails';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,7 +26,7 @@ function App() {
 
 
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <h1>
                 Blog app
               </h1>
@@ -34,6 +36,7 @@ function App() {
               <h1>
                 Blog Details
               </h1>
+              <BlogDetails/>
             </Route>
             <Route path="/add-blog">
               <h1>
