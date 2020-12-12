@@ -11,7 +11,7 @@ const BlogForm = (props) => {
             description
         });
     }
-    
+
     useEffect(() => {
         if (props.title && props.description) {
             setTitle(props.title);
@@ -23,13 +23,15 @@ const BlogForm = (props) => {
         <div>
             <form onSubmit={handleSubmit}>
                 <div>
+                    <p>Tile</p>
                     <input type="text" name="" id="" value={title}  onChange={(e)=> setTitle(e.target.value)} />
                 </div>
-                <div>
+                <div className="mt-2">
+                    <p>Description</p>
                     <textarea name="" id="" cols="30" rows="10" value={description} onChange={(e)=> setDescription(e.target.value)} ></textarea>
                 </div>
                 <div>
-                    <button type="submit">Submit</button>
+                    <button className="btn btn-info" type="submit">Submit</button>
                 </div>
             </form>
         </div>

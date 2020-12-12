@@ -8,9 +8,9 @@ const Blogs = ({blogs}) => {
         <div>
             {
                 blogs.map(blog => (
-                    <ul>
+                   
                         <BlogList key={blog.id} blog={blog}  />
-                    </ul>
+                    
                 ))
             }
             

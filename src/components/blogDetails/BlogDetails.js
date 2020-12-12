@@ -1,9 +1,15 @@
 import React from 'react'
+import { useEffect,useState } from 'react';
 import {connect} from 'react-redux';
 
 
 
 const BlogDetails = ({blogDetails}) => {
+    const [date,setDate] = useState("");
+    useEffect(()=>{
+        let d = new Date(blogDetails.dateAdded);
+        setDate(d.toString());
+    },[])
     return (
         <div>
             <h2>
@@ -13,7 +19,7 @@ const BlogDetails = ({blogDetails}) => {
                 {blogDetails.description}
             </p>
             <p>
-                {blogDetails.dateAdded}
+                {date}
             </p>
         </div>
     )

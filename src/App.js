@@ -2,12 +2,12 @@ import Blogs from './components/blogs/Blogs';
 import BlogDetails from './components/blogDetails/BlogDetails';
 import AddBlog from './components/addBlog/AddBlog';
 import EditBlog from './components/editBlog/EditBlog';
+import Navbar from './components/navbar/';
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -15,18 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <div className="container">
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Blogs</Link>
-              </li>
-              <li>
-                <Link to="/add-blog">Add Blog</Link>
-              </li>
-            </ul>
-          </nav>
-
-
+          <Navbar/>
           <Switch>
             <Route exact path="/" render={(props) => <Blogs {...props}/>} />
             <Route path="/blog-details/:id"  render={(props) => <BlogDetails {...props}/>} />
