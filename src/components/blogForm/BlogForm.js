@@ -27,7 +27,7 @@ const BlogForm = (props) => {
                     <textarea name="" id="" cols="30" rows="10" value={description} onChange={(e)=> setDescription(e.target.value)} ></textarea>
                 </div>
                 <div>
-                    <button type="submit">Add Blog</button>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>

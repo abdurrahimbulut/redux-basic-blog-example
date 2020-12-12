@@ -5,7 +5,6 @@ import {useParams} from "react-router-dom";
 
 
 const BlogDetails = ({blogDetails}) => {
-    console.log(blogDetails);
     return (
         <div>
             <h2>
@@ -21,9 +20,9 @@ const BlogDetails = ({blogDetails}) => {
     )
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state,props) => {
     return {
-      blogDetails: (state.blogs.filter(({id}) => id === useParams().id )).shift()
+      blogDetails: (state.blogs.filter(({id}) => id === props.match.params.id )).shift()
     }
 }
 

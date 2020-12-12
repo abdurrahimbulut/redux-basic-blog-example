@@ -34,12 +34,7 @@ function App() {
               </h1>
               <Blogs />
             </Route>
-            <Route path="/blog-details/:id">
-              <h1>
-                Blog Details
-              </h1>
-              <BlogDetails />
-            </Route>
+            <Route path="/blog-details/:id"  render={(props) => <BlogDetails {...props}/>} />
             <Route path="/add-blog">
               <h1>
                 Add Blog
