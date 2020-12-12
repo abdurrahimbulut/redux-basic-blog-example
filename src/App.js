@@ -36,7 +36,7 @@ function App() {
               <h1>
                 Blog Details
               </h1>
-              <BlogDetails/>
+              <BlogDetails />
             </Route>
             <Route path="/add-blog">
               <h1>

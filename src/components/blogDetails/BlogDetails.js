@@ -1,25 +1,35 @@
 import React from 'react'
-import {useParams} from "react-router-dom";
-import {getBlog} from "../../redux/actions/blog";
 import {connect} from 'react-redux';
+import {useParams} from "react-router-dom";
 
 
-const BlogDetails = (props) => {
-    let { id } = useParams();
-    //console.log(getBlog(id));
-    console.log(id);
+
+const BlogDetails = ({blogDetails}) => {
+    console.log(blogDetails);
     return (
         <div>
-            
+            <h2>
+                {blogDetails.title}
+            </h2>
+            <p>
+                {blogDetails.description}
+            </p>
+            <p>
+                {blogDetails.dateAdded}
+            </p>
         </div>
     )
 }
 
+const mapStateToProps = (state) => {
+    return {
+      blogDetails: (state.blogs.filter(({id}) => id === useParams().id )).shift()
+    }
+}
 
 
-const mapDispatchToProps = { getBlog };
 export default connect(
-    mapDispatchToProps
+   mapStateToProps
 )(BlogDetails)
 
 //export default BlogDetails;

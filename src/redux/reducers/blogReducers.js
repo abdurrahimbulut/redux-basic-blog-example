@@ -27,8 +27,6 @@ const blogReducers = (state = blogState, action) => {
                     return blog
                 }
             })
-        case actionType.GET_BLOG:
-            return state.filter(({id}) => id === action.id)
         default:
             return state
     }   

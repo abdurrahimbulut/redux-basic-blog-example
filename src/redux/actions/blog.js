@@ -31,9 +31,3 @@ export const removeBlog = ({ id }) => {
 }
 
 
-export const getBlog = ({ id }) => {
-    return {
-        type : actionType.GET_BLOG,
-        id
-    }
-}
